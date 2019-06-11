@@ -1,0 +1,30 @@
+.nav-bg{
+    background-color: #333333
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: whitesmoke;
+}
+
+.cart{
+    float: right; 
+    background-color: #33d6bd;
+}
+
+.fas{
+    color: whitesmoke;
+}
+
+.fas.fa-charging-station{
+    color:  #33d6bd;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: rgba(0,0,0,.9);
+    text-decoration: none;
+  }

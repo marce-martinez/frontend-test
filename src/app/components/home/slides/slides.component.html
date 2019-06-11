@@ -1,0 +1,49 @@
+<div id="home-slide" class="d-none d-md-block carousel slide mt-4 bg-light" data-ride="carousel">
+  <div class="carousel-inner">
+    <div *ngFor="let product of products; let i = index">
+      <div *ngIf="i == 0; else elseBlock">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-6">
+              <img [src]="product.url" width="400" height="400">
+            </div>
+            <div class="col-md-6">
+              <div class="carousel-caption">
+                <h3>{{ getCategory(product.albumId) }}</h3>
+                <p>{{ product.title }}</p>
+                <button type="button" class="btn btn-info">
+                  <a  [routerLink]="[ '/product', product.id ]">Ver Producto</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>      
+      <ng-template #elseBlock>
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col-md-6">
+                  <img [src]="product.url" width="400" height="400">
+                </div>
+                <div class="col-md-6">
+                  <div class="carousel-caption slide-content">
+                    <h3>{{ getCategory(product.albumId) }}</h3>
+                    <p>{{ product.title }}</p>
+                    <button type="button" class="btn btn-info">
+                      <a  [routerLink]="[ '/product', product.id ]">Ver Producto</a>
+                    </button>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#home-slide" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#home-slide" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+

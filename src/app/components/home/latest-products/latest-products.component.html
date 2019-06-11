@@ -1,0 +1,52 @@
+<div class="mt-4 p-3 bg-light">
+  Latest
+</div>
+
+<div class="row">
+  <div *ngFor="let product of products" class="col-sm-12 col-md-4 col-lg-4 mt-4">
+    <div class="card mx-auto">
+      <img class="card-img-top img-thumbnail" [src]="product.thumbnailUrl" alt="Card image">
+      <div class="card-body">
+        <h5 class="price">{{product.price | currency : 'USD' : 'symbol' : '1.0'}}</h5>
+        <p >{{product.title}}</p>
+        <div *ngFor="let number of [1,2,3,4,5]" class="d-inline">
+          <div *ngIf="number <= product.score; else elseBlock" class="d-inline">
+            <i class="fas fa-star"></i>
+          </div>
+          <ng-template #elseBlock>
+            <i class="far fa-star"></i>
+          </ng-template>
+        </div>
+        <br><br>
+        <button type="button" class="btn btn-info">
+            <a  [routerLink]="[ '/product', product.id ]">Comprar</a>
+          </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+    <div *ngFor="let product of products" class="col-sm-12 col-md-4 col-lg-4 mt-4">
+      <div class="card mx-auto">
+        <img class="card-img-top img-thumbnail" [src]="product.thumbnailUrl" alt="Card image">
+        <div class="card-body">
+          <h5 class="price">{{product.price | currency : 'USD' : 'symbol' : '1.0'}}</h5>
+          <p >{{product.title}}</p>
+        <div *ngFor="let number of [1,2,3,4,5]" class="d-inline">
+          <div *ngIf="number <= product.score; else elseBlock" class="d-inline">
+            <i class="fas fa-star"></i>
+          </div>
+          <ng-template #elseBlock>
+            <i class="far fa-star"></i>
+          </ng-template>
+        </div>
+        <br><br>
+        <button type="button" class="btn btn-info">
+            <a  [routerLink]="[ '/product', product.id ]">Comprar</a>
+          </button>
+        </div>
+      </div>
+    </div>  
+  </div>
+  

@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  font-size: 0.9rem;
+}
+
+.fas, .fab{
+    color: #33d6bd;
+}
+
+.btn{
+    color: white;
+    border-color: #33d6bd;
+    background-color: #33d6bd
+}
+
+.list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: #33d6bd;
+    border-color: #33d6bd;
+  }
+  
+  .list-group-item {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #f8f9fa;
+    border: 1px solid #e1e3e6;
+  }
+  
+  a {
+    color: rgba(0,0,0,.9);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #33d6bd;
+    text-decoration: none;
+  }
+
+  .price{
+    color: #33d6bd;
+}
+
+.card-text{
+    font-size: 0.7rem;
+}
